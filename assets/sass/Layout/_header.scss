@@ -1,0 +1,62 @@
+.header {
+    background-color: #f4ecde;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    &-wrapper {
+        @include flexBox(hor);
+        padding: 14px 0;
+    }
+
+    &-logo {
+        padding-right: 68px;
+
+        @include responsive_Change {
+            padding-right: 45px;
+        }
+    }
+
+    &-cover {
+        width: 100%;
+        @include flexBox(bothSides);
+    }
+
+    &-nav {
+        @include flexBox(hor);
+
+        &__link {
+            & + & {
+                padding-left: 40px;
+
+                @include responsive_Change {
+                    padding-left: 30px;
+                }
+            }
+
+            font-weight: bold;
+
+            &.active {
+                color: $color-main;
+            }
+        }
+    }
+
+    &-box {
+        @include flexBox(hor);
+
+        &__icon {
+            padding-right: 12px;
+        }
+
+        &__sub {
+            color: $color-desc;
+        }
+
+        &__hotline {
+            font-size: 22px;
+            font-weight: bold;
+            color: $color-main;
+        }
+    }
+}

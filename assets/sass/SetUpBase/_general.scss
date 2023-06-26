@@ -1,0 +1,76 @@
+.general {
+    &-wrapper {
+        margin-bottom: 35px;
+        padding: 25px 30px;
+
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 6px -1px, rgba(0, 0, 0, 0.04) 0px 2px 4px -1px;
+
+        @include responsive_fitLow {
+            padding: 22px 22px;
+        }
+
+        @include responsive_table {
+            padding: 22px 22px;
+        }
+
+        @include responsive_mobile {
+            padding: 18px 18px;
+        }
+    }
+
+    &-header {
+        padding-bottom: 20px;
+        border-bottom: 1.2px solid $color-sub;
+        @include flexBox(bothSides);
+
+        @include responsive_mobile {
+            padding-bottom: 14px;
+        }
+
+        &.special {
+            color: #fff;
+            border-bottom: 0;
+
+            .general-header__link {
+                color: #fff;
+
+                & > svg > path {
+                    fill: #fff;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 19px;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            @include responsive_fitLow {
+                font-size: 18px;
+            }
+
+            @include responsive_mobile {
+                font-size: 15px;
+            }
+        }
+
+        &__link {
+            font-style: italic;
+            color: $color-orange;
+
+            @include responsive_table {
+                font-size: 15px;
+            }
+
+            @include responsive_mobile {
+                font-size: 14px;
+            }
+
+            & > svg {
+                margin-left: 6px;
+            }
+        }
+    }
+}
