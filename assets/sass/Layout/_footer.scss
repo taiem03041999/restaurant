@@ -1,10 +1,24 @@
 .footer {
     &-wrapper {
         padding: 40px 0;
+
+        @include responsive_mobile {
+            padding: 30px 0;
+        }
     }
 
     &-top {
         @include gridBox(3, 40px, 40px);
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba($color: $color-desc, $alpha: 0.2);
+
+        @include responsive_table {
+            @include gridBox(2, 30px, 30px);
+        }
+
+        @include responsive_mobile {
+            @include gridBox(1, 20px, 20px);
+        }
 
         &-item {
         }
@@ -14,5 +28,51 @@
             font-weight: bold;
             padding-bottom: 8px;
         }
+
+        &__text {
+            color: $color-desc;
+        }
+
+        &__link {
+            padding: 10px 0 0;
+            color: $color-main;
+        }
+
+        &__hotline {
+            padding: 10px 0 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    &-bottom {
+        @include flexBox(bothSides);
+        padding-top: 60px;
+
+        @include responsive_mobile {
+            flex-direction: column;
+            padding-top: 30px;
+        }
+
+        &__social {
+            @include flexBox(hor);
+
+            @include responsive_mobile {
+                padding: 30px 0;
+            }
+
+            & > svg {
+                margin-left: 20px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &-copyright {
+        font-size: 14px;
+        color: rgba($color: $color-desc, $alpha: 0.5);
     }
 }

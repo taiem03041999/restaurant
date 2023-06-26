@@ -7,6 +7,11 @@
     &-wrapper {
         @include flexBox(hor);
         padding: 14px 0;
+
+        @include responsive_bothTM {
+            @include flexBox(bothSides);
+            padding: 10px 0;
+        }
     }
 
     &-logo {
@@ -20,6 +25,10 @@
     &-cover {
         width: 100%;
         @include flexBox(bothSides);
+
+        @include responsive_bothTM {
+            justify-content: right;
+        }
     }
 
     &-nav {
@@ -40,6 +49,10 @@
                 color: $color-main;
             }
         }
+
+        @include responsive_bothTM {
+            display: none;
+        }
     }
 
     &-box {
@@ -57,6 +70,28 @@
             font-size: 22px;
             font-weight: bold;
             color: $color-main;
+
+            @include responsive_bothTM {
+                font-size: 16px;
+            }
+        }
+
+        // @include responsive_bothTM {
+        //     padding-right: 30px;
+        // }
+    }
+
+    &-mobile {
+        display: none;
+        margin-left: 26px;
+
+        @include responsive_bothTM {
+            display: block;
+        }
+
+        & > i {
+            font-size: 28px;
+            color: $color-desc;
         }
     }
 }
