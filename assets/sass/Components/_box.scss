@@ -1,0 +1,64 @@
+.box {
+    &-wrapper {
+        margin: -90px 0 150px;
+    }
+
+    &-list {
+        @include gridBox(3, 40px, 40px);
+
+        &__item {
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: bottom;
+            background-size: auto;
+
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #fff;
+            min-height: 385px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        &__heading {
+            padding: 35px 0 95px;
+            text-align: center;
+            background-color: $color-main;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            color: #fff;
+        }
+
+        &__title {
+            padding-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        &__btn {
+            padding: 8px 20px 7px;
+            border: 2px solid $color-orange;
+            border-radius: 100px;
+            display: inline-block;
+
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: #fff;
+            }
+
+            & > i {
+                padding-right: 6px;
+            }
+        }
+
+        &__img {
+            margin-top: -60px;
+
+            & > img {
+                margin: 0 auto;
+            }
+        }
+    }
+}
