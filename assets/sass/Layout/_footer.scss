@@ -1,2 +1,18 @@
 .footer {
+    &-wrapper {
+        padding: 40px 0;
+    }
+
+    &-top {
+        @include gridBox(3, 40px, 40px);
+
+        &-item {
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: 8px;
+        }
+    }
 }
