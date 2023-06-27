@@ -1,0 +1,28 @@
+.bg {
+    min-height: 330px;
+
+    @include responsive_table {
+        min-height: 250px;
+    }
+
+    @include responsive_mobile {
+        min-height: 150px;
+    }
+
+    &-title {
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+        padding-top: 195px;
+
+        @include responsive_table {
+            padding-top: 120px;
+            font-size: 35px;
+        }
+
+        @include responsive_mobile {
+            padding-top: 80px;
+            font-size: 24px;
+        }
+    }
+}
