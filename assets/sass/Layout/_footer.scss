@@ -1,9 +1,9 @@
 .footer {
     &-wrapper {
-        padding: 40px 0;
+        padding: 40px 0 30px;
 
         @include responsive_mobile {
-            padding: 30px 0;
+            padding: 25px 0;
         }
     }
 
@@ -34,11 +34,10 @@
         }
 
         &__text {
-            color: $color-desc;
         }
 
         &__link {
-            padding: 10px 0 0;
+            padding: 7px 0 0;
             color: $color-main;
         }
 
@@ -53,6 +52,11 @@
         @include flexBox(bothSides);
         padding-top: 60px;
 
+        @include responsive_table {
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
         @include responsive_mobile {
             flex-direction: column;
             padding-top: 30px;
@@ -61,8 +65,12 @@
         &__social {
             @include flexBox(hor);
 
+            @include responsive_table {
+                padding-left: 50px;
+            }
+
             @include responsive_mobile {
-                padding: 30px 0;
+                padding: 25px 0;
             }
         }
 
@@ -80,5 +88,9 @@
     &-copyright {
         font-size: 14px;
         color: rgba($color: $color-desc, $alpha: 0.5);
+
+        @include responsive_table {
+            padding: 20px 50px 0;
+        }
     }
 }

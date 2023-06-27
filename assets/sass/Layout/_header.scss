@@ -1,15 +1,38 @@
 .header {
-    background-color: #f4ecde;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    background-color: transparent;
+    height: 0;
 
     &-wrapper {
+        position: relative;
+        z-index: 2;
         @include flexBox(hor);
-        padding: 14px 0;
+        padding: 24px 0;
 
         @include responsive_bothTM {
             @include flexBox(bothSides);
+            padding: 10px 0;
+        }
+    }
+
+    &-scroll {
+        position: fixed;
+        top: 0;
+        left: 0%;
+
+        display: none;
+        width: 100%;
+        z-index: 1054;
+
+        background-color: #f4ecde;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.5s linear;
+        animation: smoothScroll 0.8s forwards;
+
+        &.active {
+            display: block;
+        }
+
+        .header-wrapper {
             padding: 10px 0;
         }
     }
@@ -80,6 +103,10 @@
         &__icon {
             padding-right: 12px;
 
+            @include responsive_table {
+                width: 50px;
+            }
+
             @include responsive_mobile {
                 width: 40px;
             }
@@ -87,6 +114,11 @@
 
         &__sub {
             color: $color-desc;
+
+            @include responsive_mobile {
+                font-size: 14px;
+                line-height: 1.2;
+            }
         }
 
         &__hotline {
@@ -96,6 +128,11 @@
 
             @include responsive_bothTM {
                 font-size: 16px;
+            }
+
+            @include responsive_mobile {
+                font-size: 15px;
+                line-height: 1.4;
             }
         }
 
