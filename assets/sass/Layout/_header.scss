@@ -15,25 +15,25 @@
     }
 
     &-scroll {
-        position: fixed;
-        top: 0;
-        left: 0%;
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0%;
+            width: 100%;
+            z-index: 1054;
 
-        display: none;
-        width: 100%;
-        z-index: 1054;
+            background-color: #f4ecde;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s linear;
+            animation: smoothScroll 0.8s forwards;
 
-        background-color: #f4ecde;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-        transition: all 0.5s linear;
-        animation: smoothScroll 0.8s forwards;
+            &.active {
+                display: block;
+            }
 
-        &.active {
-            display: block;
-        }
-
-        .header-wrapper {
-            padding: 10px 0;
+            .header-wrapper {
+                padding: 10px 0;
+            }
         }
     }
 
