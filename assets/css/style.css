@@ -474,7 +474,9 @@ body {
   color: rgba(95, 95, 95, 0.5); }
 
 .banner {
-  height: max-content; }
+  height: max-content;
+  position: relative;
+  z-index: -1; }
   .banner::before {
     content: "";
     background-image: url(/assets/images/Icon/Icon-banner2.png);
