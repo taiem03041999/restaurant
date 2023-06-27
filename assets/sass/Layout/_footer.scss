@@ -20,7 +20,11 @@
             @include gridBox(1, 20px, 20px);
         }
 
-        &-item {
+        &__item {
+            @include responsive_mobile {
+                padding-top: 15px;
+                border-top: 1px solid rgba(95, 95, 95, 0.2);
+            }
         }
 
         &__title {
@@ -60,13 +64,15 @@
             @include responsive_mobile {
                 padding: 30px 0;
             }
+        }
 
-            & > svg {
-                margin-left: 20px;
+        &__link {
+            & + & {
+                padding-left: 20px;
+            }
 
-                &:first-child {
-                    margin-left: 0;
-                }
+            &:first-child {
+                padding-left: 0;
             }
         }
     }
