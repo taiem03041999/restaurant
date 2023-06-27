@@ -7,6 +7,11 @@
     &-wrapper {
         @include flexBox(hor);
         padding: 14px 0;
+
+        @include responsive_bothTM {
+            @include flexBox(bothSides);
+            padding: 10px 0;
+        }
     }
 
     &-logo {
@@ -15,11 +20,19 @@
         @include responsive_Change {
             padding-right: 45px;
         }
+
+        @include responsive_mobile {
+            padding-right: 15px;
+        }
     }
 
     &-cover {
         width: 100%;
         @include flexBox(bothSides);
+
+        @include responsive_bothTM {
+            justify-content: right;
+        }
     }
 
     &-nav {
@@ -40,6 +53,25 @@
                 color: $color-main;
             }
         }
+
+        @include responsive_bothTM {
+            display: none;
+        }
+
+        &__mobile {
+            padding: 20px 10px;
+
+            .header-nav {
+                &__link {
+                    padding: 10px;
+                    border-bottom: 1px solid rgba(95, 95, 95, 0.2);
+
+                    &:last-child {
+                        border: 0;
+                    }
+                }
+            }
+        }
     }
 
     &-box {
@@ -47,6 +79,10 @@
 
         &__icon {
             padding-right: 12px;
+
+            @include responsive_mobile {
+                width: 40px;
+            }
         }
 
         &__sub {
@@ -57,6 +93,28 @@
             font-size: 22px;
             font-weight: bold;
             color: $color-main;
+
+            @include responsive_bothTM {
+                font-size: 16px;
+            }
+        }
+
+        // @include responsive_bothTM {
+        //     padding-right: 30px;
+        // }
+    }
+
+    &-mobile {
+        display: none;
+        margin-left: 26px;
+
+        @include responsive_bothTM {
+            display: block;
+        }
+
+        & > i {
+            font-size: 28px;
+            color: $color-desc;
         }
     }
 }
