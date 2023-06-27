@@ -1,7 +1,5 @@
 .banner {
     height: max-content;
-    position: relative;
-    z-index: -1;
 
     &::before {
         content: "";
@@ -21,10 +19,9 @@
     }
 
     &-content {
-        padding: 35px 0 60px;
+        padding: 110px 0 60px;
         @include flexBox(bothSides);
         position: relative;
-        z-index: 2;
 
         @include responsive_bothTM {
             flex-direction: column;
@@ -32,7 +29,7 @@
         }
 
         @include responsive_mobile {
-            padding: 30px 0 35px;
+            padding: 70px 0 30px;
         }
 
         &__cover {
@@ -40,11 +37,11 @@
 
             @include responsive_bothTM {
                 width: 70%;
-                text-align: center;
                 padding-top: 30px;
             }
 
             @include responsive_mobile {
+                text-align: center;
                 width: 100%;
             }
         }
@@ -66,12 +63,8 @@
                 font-size: 40px;
             }
 
-            @include responsive_table {
-                font-size: 30px;
-            }
-
             @include responsive_mobile {
-                font-size: 22px;
+                font-size: 30px;
             }
         }
 
@@ -103,8 +96,12 @@
                 margin-right: 0;
             }
 
-            @include responsive_bothTM {
-                width: 50%;
+            @include responsive_table {
+                width: 60%;
+            }
+
+            @include responsive_mobile {
+                width: 90%;
             }
         }
     }

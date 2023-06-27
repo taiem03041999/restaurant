@@ -1,4 +1,7 @@
 .box {
+    position: relative;
+    z-index: 10;
+
     &-wrapper {
         margin: -90px 0 150px;
 
@@ -19,7 +22,7 @@
         }
 
         @include responsive_mobile {
-            @include gridBox(1, 20px, 20px);
+            @include gridBox(1, 25px, 25px);
         }
 
         &__item {
@@ -34,6 +37,12 @@
             background-color: #fff;
             min-height: 385px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            @include responsive_mobile {
+                width: 90%;
+                margin: 0 auto;
+                min-height: initial;
+            }
         }
 
         &__heading {
@@ -43,6 +52,10 @@
             border-bottom-left-radius: 60px;
             border-bottom-right-radius: 60px;
             color: #fff;
+
+            @include responsive_mobile {
+                padding: 20px 0 30px;
+            }
         }
 
         &__title {
@@ -84,6 +97,15 @@
 
             &.specical {
                 bottom: 20px;
+
+                @include responsive_mobile {
+                    bottom: 0;
+                }
+            }
+
+            @include responsive_mobile {
+                position: relative;
+                width: 60%;
             }
         }
     }
