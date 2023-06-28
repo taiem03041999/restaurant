@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Việt Nông</title>
+    <title>Restaurant</title>
     <!-- Icon title -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/Logo/Icon.svg " />
     <!-- fontAwesome Css -->
@@ -148,6 +148,14 @@
     <footer class="footer">
         <div class="container-xl">
             <div class="footer-wrapper">
+                <a href="tel:123456789" class="footer-hotline__mobile">
+                    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div class="coccoc-alo-ph-circle"></div>
+                        <div class="coccoc-alo-ph-circle-fill"></div>
+                        <div class="coccoc-alo-ph-img-circle"></div>
+                    </div>
+                </a>
+
                 <div class="footer-top">
                     <div class="footer-top__item">
                         <p class="footer-top__title">Titan Food Khan</p>
@@ -302,9 +310,9 @@
 
         function myFunction() {
             if (window.pageYOffset > sticky) {
-                headerScroll.classList.add('active');
+                headerScroll.classList.add('fixed');
             } else {
-                headerScroll.classList.remove('active');
+                headerScroll.classList.remove('fixed');
             }
         }
     </script>

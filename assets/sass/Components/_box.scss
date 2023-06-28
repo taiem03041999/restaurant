@@ -39,7 +39,7 @@
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
             @include responsive_mobile {
-                width: 90%;
+                width: 85%;
                 margin: 0 auto;
                 min-height: initial;
             }
@@ -54,7 +54,7 @@
             color: #fff;
 
             @include responsive_mobile {
-                padding: 20px 0 30px;
+                padding: 20px 0 60px;
             }
         }
 
@@ -91,6 +91,12 @@
             margin-left: auto;
             margin-right: auto;
 
+            @include responsive_mobile {
+                position: relative;
+                margin-top: -40px;
+                width: 60%;
+            }
+
             & > img {
                 margin: 0 auto;
             }
@@ -101,11 +107,6 @@
                 @include responsive_mobile {
                     bottom: 0;
                 }
-            }
-
-            @include responsive_mobile {
-                position: relative;
-                width: 60%;
             }
         }
     }
