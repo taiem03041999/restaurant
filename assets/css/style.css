@@ -1153,3 +1153,104 @@ body {
     .code-item__btn:hover {
       color: #fff;
       background-color: #fcb302; }
+
+.register-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between; }
+
+.register-inner {
+  padding: 0 30px 48px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-top: -103px; }
+
+.register-form__img {
+  position: relative;
+  padding-top: 50%;
+  overflow: hidden;
+  width: 80%;
+  margin: -70px auto 0;
+  border-radius: 15px; }
+  .register-form__img > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.register-form__title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px; }
+  @media only screen and (max-width: 46.1875em) {
+    .register-form__title {
+      font-size: 20px;
+      padding-top: 16px; }
+      .register-form__title .hide-on-mobile {
+        display: none; } }
+  .register-form__title > sup {
+    font-size: 20px; }
+    @media only screen and (max-width: 46.1875em) {
+      .register-form__title > sup {
+        font-size: 14px; }
+        .register-form__title > sup .hide-on-mobile {
+          display: none; } }
+
+.register-form__note {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: #f43127;
+  padding-top: 16px; }
+
+.register-form__time {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 30px; }
+  @media only screen and (max-width: 46.1875em) {
+    .register-form__time {
+      margin-top: 22px; }
+      .register-form__time .hide-on-mobile {
+        display: none; } }
+
+.register-form__cover {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.register-form__number {
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #010101;
+  border-radius: 5px; }
+
+.register-form__format {
+  padding-top: 10px; }
+
+.register-form__sub {
+  font-size: 34px;
+  font-weight: bold;
+  height: 60px;
+  width: 34px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
