@@ -1,0 +1,89 @@
+.register {
+    &-wrapper {
+        @include flexBox(null);
+        justify-content: space-between;
+    }
+
+    &-inner {
+        padding: 0 30px 48px 30px;
+        background-color: #fff;
+        border-radius: 20px;
+        margin-top: -103px;
+    }
+
+    &-form {
+        &__img {
+            @include imgPT(50%);
+            width: 80%;
+            margin: -70px auto 0;
+            border-radius: 15px;
+        }
+
+        &__title {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 20px;
+
+            @include responsive_mobile {
+                font-size: 20px;
+                padding-top: 16px;
+            }
+
+            & > sup {
+                font-size: 20px;
+
+                @include responsive_mobile {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__note {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            color: $color-main;
+            padding-top: 16px;
+        }
+
+        &__time {
+            @include flexBox(top);
+            justify-content: center;
+            margin-top: 30px;
+
+            @include responsive_mobile {
+                margin-top: 22px;
+            }
+        }
+
+        &__cover {
+            @include flexBox(hor);
+            flex-direction: column;
+        }
+
+        &__number {
+            font-size: 30px;
+            color: #fff;
+            font-weight: bold;
+
+            width: 60px;
+            height: 60px;
+            @include flexBox(both);
+            background-color: $color-title;
+            border-radius: 5px;
+        }
+
+        &__format {
+            padding-top: 10px;
+        }
+
+        &__sub {
+            font-size: 34px;
+            font-weight: bold;
+            height: 60px;
+            width: 34px;
+            @include flexBox(both);
+        }
+    }
+}
