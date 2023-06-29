@@ -1214,7 +1214,7 @@ body {
         padding-top: 24px; } }
     @media only screen and (max-width: 46.1875em) {
       .register-inner__note {
-        padding-top: 18px; }
+        padding-top: 14px; }
         .register-inner__note .hide-on-mobile {
           display: none; } }
   .register-inner__sub {
@@ -1494,6 +1494,91 @@ body {
         font-size: 16px; }
         .register-form__btn .hide-on-mobile {
           display: none; } }
+  .register-form__select {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    padding: 5px 0; }
+    @media only screen and (max-width: 46.1875em) {
+      .register-form__select {
+        display: block; }
+        .register-form__select .hide-on-mobile {
+          display: none; } }
+    .register-form__select.grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 0;
+      width: 60%; }
+      @media only screen and (max-width: 63.9375em) {
+        .register-form__select.grid {
+          width: 100%; }
+          .register-form__select.grid .hide-on-bothTM {
+            display: none !important; } }
+      .register-form__select.grid .register-form__option {
+        padding-left: 0; }
+  .register-form__option {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 14px;
+    cursor: pointer; }
+    .register-form__option + .register-form__option {
+      padding-left: 30px; }
+      @media only screen and (max-width: 46.1875em) {
+        .register-form__option + .register-form__option {
+          padding-left: 0; }
+          .register-form__option + .register-form__option .hide-on-mobile {
+            display: none; } }
+  .register-form__input {
+    display: none;
+    cursor: pointer; }
+    .register-form__input:checked ~ .register-form__label {
+      border: 0; }
+      .register-form__input:checked ~ .register-form__label > svg {
+        display: block; }
+  .register-form__label {
+    min-width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    margin-right: 10px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #cdcdcd;
+    transition: 0.3s all linear; }
+    .register-form__label > svg {
+      transition: 0.3s all linear;
+      display: none; }
+    .register-form__label.tick {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      margin-right: 12px;
+      border: 2.8px solid #cdcdcd;
+      border-radius: 4px;
+      transition: all 0.1s; }
+      .register-form__label.tick::after {
+        content: "";
+        position: absolute;
+        right: -4px;
+        top: -9px;
+        width: 7px;
+        height: 18px;
+        z-index: 9;
+        transform: rotate(138deg);
+        background-color: #ffffff; }
+  .register-form__value {
+    font-weight: 500;
+    cursor: pointer; }
 
 .register-cover {
   padding: 70px 0 0 100px;
