@@ -1173,11 +1173,13 @@ body {
         display: none; } }
 
 .register-inner {
-  padding: 0 34px 48px 34px;
+  padding: 0 33px 48px 33px;
   background-color: #fff;
+  text-align: center;
   border-radius: 20px;
   margin-top: -103px;
-  text-align: center;
+  height: fit-content;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
   min-width: 580px; }
   @media only screen and (max-width: 1283px) {
     .register-inner {
@@ -1196,6 +1198,15 @@ body {
       margin-top: 0; }
       .register-inner .hide-on-mobile {
         display: none; } }
+  .register-inner.coupon {
+    margin-top: -123px;
+    padding: 30px 33px 45px 33px; }
+    @media only screen and (max-width: 46.1875em) {
+      .register-inner.coupon {
+        margin-top: -60px;
+        padding: 30px 33px 30px 33px; }
+        .register-inner.coupon .hide-on-mobile {
+          display: none; } }
   .register-inner__note {
     padding-top: 30px; }
     @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
@@ -1224,6 +1235,60 @@ body {
         padding: 8px 40px;
         font-size: 14px; }
         .register-inner__sub .hide-on-mobile {
+          display: none; } }
+  .register-inner__code {
+    position: relative;
+    padding-top: 25%;
+    overflow: hidden;
+    width: 50%;
+    margin: 20px auto; }
+    .register-inner__code > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+      .register-inner__code {
+        width: 60%;
+        position: relative;
+        padding-top: 27%;
+        overflow: hidden; }
+        .register-inner__code > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; } }
+    @media only screen and (max-width: 46.1875em) {
+      .register-inner__code {
+        width: 70%;
+        position: relative;
+        padding-top: 30%;
+        overflow: hidden; }
+        .register-inner__code .hide-on-mobile {
+          display: none; }
+        .register-inner__code > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; } }
+  .register-inner__info {
+    padding: 16px 0;
+    line-height: 2; }
+    @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+      .register-inner__info {
+        padding: 14px 0;
+        line-height: 1.7; } }
+    @media only screen and (max-width: 46.1875em) {
+      .register-inner__info {
+        padding: 10px 0 0;
+        line-height: 1.6; }
+        .register-inner__info .hide-on-mobile {
           display: none; } }
 
 .register-form {
@@ -1260,14 +1325,18 @@ body {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    padding-top: 20px; }
+    padding-top: 20px;
+    width: 80%;
+    margin: 0 auto; }
     @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
       .register-form__title {
-        font-size: 26px; } }
+        font-size: 26px;
+        width: 100%; } }
     @media only screen and (max-width: 46.1875em) {
       .register-form__title {
         font-size: 20px;
-        padding-top: 16px; }
+        padding-top: 16px;
+        width: 100%; }
         .register-form__title .hide-on-mobile {
           display: none; } }
     .register-form__title > sup {
@@ -1378,6 +1447,22 @@ body {
             display: none; } }
     .register-form__content input + input {
       margin-top: 20px; }
+    .register-form__content > textarea {
+      min-height: 150px;
+      width: 100%;
+      border: 1px solid rgba(95, 95, 95, 0.35);
+      border-radius: 23px;
+      padding: 17px 30px; }
+      @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+        .register-form__content > textarea {
+          padding: 12px 24px; } }
+      @media only screen and (max-width: 46.1875em) {
+        .register-form__content > textarea {
+          padding: 10px 15px;
+          font-size: 14px;
+          min-height: 130px; }
+          .register-form__content > textarea .hide-on-mobile {
+            display: none; } }
   .register-form__btn {
     color: #fff;
     font-size: 18px;
@@ -1389,6 +1474,10 @@ body {
     margin: 34px 17px 0 17px;
     display: inline-block;
     width: -webkit-fill-available; }
+    .register-form__btn.success {
+      width: auto;
+      padding: 0 50px;
+      margin-top: 0; }
     @media only screen and (max-width: 1283px) {
       .register-form__btn {
         margin: 30px 0 0; }
@@ -1407,7 +1496,8 @@ body {
           display: none; } }
 
 .register-cover {
-  padding: 70px 0 0 100px; }
+  padding: 70px 0 0 100px;
+  min-width: 50%; }
   @media only screen and (max-width: 1283px) {
     .register-cover {
       padding: 50px 0 0 60px; }
@@ -1438,3 +1528,8 @@ body {
     margin-top: 2px; }
   .register-cover__content .banner-content__text {
     font-size: 16px; }
+
+.register-rotation {
+  min-width: 50%;
+  padding: 0 30px;
+  margin-top: -103px; }
