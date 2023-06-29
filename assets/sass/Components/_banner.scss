@@ -73,10 +73,16 @@
         }
 
         &__box {
-            @include flexBox(hor);
+            @include flexBox(top);
 
             & + & {
                 padding-top: 10px;
+            }
+
+            & > svg {
+                min-width: 20px;
+                min-height: 20px;
+                margin-top: 6px;
             }
         }
 
@@ -84,6 +90,7 @@
             font-size: 20px;
             color: $color-desc;
             padding-left: 10px;
+            font-weight: 500;
 
             @include responsive_mobile {
                 font-size: 16px;
