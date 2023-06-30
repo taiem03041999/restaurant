@@ -1,5 +1,6 @@
 .banner {
     height: max-content;
+    position: relative;
 
     &::before {
         content: "";

@@ -93,7 +93,7 @@
                 position: absolute;
                 background: rgba(30, 30, 30, 0.1) url(https://drive.google.com/uc?id=1V3N2b79QjDWetC_ss9wI3c-xpWDymn9R)
                     no-repeat center center;
-                background-size: 70%;
+                background-size: 60%;
                 -webkit-border-radius: 100%;
                 -moz-border-radius: 100%;
                 border-radius: 100%;
@@ -354,6 +354,13 @@
         @include gridBox(3, 40px, 40px);
         padding-bottom: 30px;
         border-bottom: 1px solid rgba($color: $color-desc, $alpha: 0.2);
+
+        max-height: 300px;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         @include responsive_table {
             @include gridBox(2, 30px, 30px);
