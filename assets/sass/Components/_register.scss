@@ -489,6 +489,7 @@
 
         &__circle {
             position: relative;
+            @include flexBox(both);
         }
 
         &__btn:visited,
