@@ -85,10 +85,6 @@
             font-size: 20px;
             font-weight: bold;
 
-            @include responsive_bothTM {
-                text-align: center;
-            }
-
             @include responsive_mobile {
                 font-size: 17px;
             }
