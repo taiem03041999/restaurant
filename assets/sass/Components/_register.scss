@@ -209,6 +209,7 @@
             @include flexBox(both);
             background-color: $color-title;
             border-radius: 5px;
+            transition: all 0.3s linear;
 
             @include responsive_table {
                 font-size: 18px;
