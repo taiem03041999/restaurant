@@ -1626,7 +1626,12 @@ body {
   padding-right: 30px;
   margin-top: -103px; }
   .register-rotation__circle {
-    position: relative; }
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .register-rotation__btn:visited, .register-rotation__btn {
     position: absolute;
     top: 50%;
