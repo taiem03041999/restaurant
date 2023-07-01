@@ -1,17 +1,17 @@
 const ARRAY_LIST = [
   {
     numberRatio: 1,
-    item: "Giảm 10K",
+    item: "Vàng 9999",
     ratio: 0.01,
   },
   {
     numberRatio: 2,
-    item: "Giảm 11K",
-    ratio: 0.3,
+    item: "Ô tô Mec",
+    ratio: 0.01,
   },
   {
     numberRatio: 3,
-    item: "Giảm 12K",
+    item: "Xe máy SH",
     ratio: 0.01,
   },
   {
@@ -26,13 +26,13 @@ const ARRAY_LIST = [
   },
   {
     numberRatio: 6,
-    item: "Giảm 15K",
+    item: "Du lịch Phú Quốc",
     ratio: 0.6,
   },
   {
     numberRatio: 7,
     item: "Giảm 16K",
-    ratio: 0.01,
+    ratio: 0.3,
   },
   {
     numberRatio: 8,
@@ -51,7 +51,7 @@ const ARRAY_LIST = [
   },
   {
     numberRatio: 11,
-    item: "Giảm 20K",
+    item: "Khoản nợ siêu to",
     ratio: 0.01,
   },
   {
@@ -68,21 +68,22 @@ const ARRAY_LIST = [
 // console.log("🚀 ~ totalPsent ~ totalPsent:", totalPsent);
 
 const listNumberRatio = ARRAY_LIST.map((arrayItem) => arrayItem.numberRatio);
-console.log("🚀 ~ listNumberRatio:", listNumberRatio);
 const listSetUpRatio = ARRAY_LIST.map((arrayItem) => arrayItem.ratio);
-console.log("🚀 ~ listSetUpRatio:", listSetUpRatio);
 
 // ============================= LuckyWheel animation   =============================
 
 // $(document).ready(function () {
 //  Setup variables
+// let heightCount = 1;
+// let arrayCount = [];
 var wheel = $(".wheel"),
   active = $(".lucky-win"),
   lastRotation = -90,
   currentRotation = 0,
   tolerance,
+  checkBtn = true,
   deg;
-$btnPlay = $("#btnPlay");
+// $btnPlay = $("#btnPlay");
 //  Creating the Timeline
 var indicator = new TimelineMax();
 var spinWheel = new TimelineMax();
@@ -90,7 +91,7 @@ var spinWheel = new TimelineMax();
 function luckyWheelAnimation() {
   //  Random degree
   function getRandomInt() {
-    const random = Math.random();
+    const random = Math.random() + Number.EPSILON;
     let sum = 0;
     let selectedNumber;
     let selectedContent;
@@ -111,16 +112,16 @@ function luckyWheelAnimation() {
     //   "Tọa độ được chọn:",
     //   presentInNumber * selectedNumber - 30 + 720
     // );
-    console.log(
-      "vị trí được chọn là:",
-      selectedNumber + " - " + selectedContent
-    );
+    // `vị trí được chọn là: ${heightCount}`,
+    console.log(`Giá trị là ${selectedNumber} -- ${selectedContent}`);
+
+    // arrayCount.push(selectedContent);
+    // heightCount++;
 
     return presentInNumber * selectedNumber - 30 + 720;
   }
 
   var deg = getRandomInt();
-  console.log("🚀 ~ luckyWheelAnimation ~ deg:", deg);
 
   indicator
     .to(active, 0.13, {
@@ -133,7 +134,6 @@ function luckyWheelAnimation() {
       ease: Power4.easeOut,
     })
     .add("end");
-
   //  Luckywheel animation
   spinWheel.to(wheel, 5, {
     rotation: deg,
@@ -159,9 +159,9 @@ function luckyWheelAnimation() {
         onComplete: function () {
           currentRotation = 0;
           lastRotation = 0;
+          checkBtn = true;
         },
-      });
-      //   .delay(5)
+      }).delay(2);
     },
   });
   spinWheel.add("end");
@@ -176,8 +176,54 @@ function handlePlayClick() {
   //   spinWheel.timeScale(1).seek(0);
 }
 
-$btnPlay.click(handlePlayClick);
-// });
+const btnPlay = document.getElementById("btnPlay");
+btnPlay.addEventListener("click", () => {
+  if (checkBtn) {
+    handlePlayClick();
+    checkBtn = false;
+  }
+});
+
+// let count = 0;
+// const myTimeout = setInterval(() => {
+//   handlePlayClick();
+//   count++;
+
+//   if (count === 100) {
+//     clearInterval(myTimeout);
+//     console.log(arrayCount);
+//     // Ví dụ sử dụng
+//     var stringOccurrences = countStringOccurrences(arrayCount);
+
+//     // In ra số lần xuất hiện của từng chuỗi
+//     for (var key in stringOccurrences) {
+//       console.log(key + ": " + stringOccurrences[key]);
+//     }
+//     // });
+//   }
+// }, 1000);
+
+// function countStringOccurrences(arr) {
+//   // Tạo một đối tượng để lưu trữ và đếm
+//   var count = {};
+
+//   // Lặp qua mảng và đếm số lần xuất hiện của từng chuỗi
+//   for (var i = 0; i < arr.length; i++) {
+//     var element = arr[i];
+
+//     // Nếu phần tử là chuỗi
+//     if (typeof element === "string") {
+//       // Kiểm tra nếu chuỗi đã tồn tại trong đối tượng count
+//       if (count[element]) {
+//         count[element]++; // Tăng số lần xuất hiện lên 1
+//       } else {
+//         count[element] = 1; // Thêm chuỗi vào đối tượng count với số lần xuất hiện là 1
+//       }
+//     }
+//   }
+
+//   return count;
+// }
 
 // function randomNumber() {
 //   const numbers = [1, 2, 3, 4, 5];
