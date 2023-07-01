@@ -15,6 +15,12 @@
         @include responsive_mobile {
             padding-bottom: 50px;
         }
+
+        &.custom {
+            @include responsive_bothTM {
+                flex-direction: column-reverse;
+            }
+        }
     }
 
     &-inner {
@@ -487,9 +493,25 @@
         padding-right: 30px;
         margin-top: -103px;
 
+        @include responsive_table {
+            margin-top: 40px;
+            padding-right: 0;
+        }
+
+        @include responsive_mobile {
+            margin-top: 30px;
+            padding-right: 0;
+        }
+
         &__circle {
             position: relative;
             @include flexBox(both);
+
+            @include responsive_mobile {
+                & > svg {
+                    height: fit-content;
+                }
+            }
         }
 
         &__btn:visited,
