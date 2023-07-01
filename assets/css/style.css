@@ -1041,7 +1041,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center; }
   @media only screen and (max-width: 63.9375em) {
     .code-item {
