@@ -28,7 +28,7 @@
     }
 
     &-item {
-        @include flexBox(bothSides);
+        @include flexBox(both);
 
         @include responsive_bothTM {
             display: block;
