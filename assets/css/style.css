@@ -1665,6 +1665,11 @@ body {
     border-radius: 50%;
     background-color: #ebb34f;
     transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 63.9375em) {
+      .register-rotation__btn:visited, .register-rotation__btn {
+        font-size: 24px; }
+        .register-rotation__btn:visited .hide-on-bothTM, .register-rotation__btn .hide-on-bothTM {
+          display: none !important; } }
     .register-rotation__btn:visited:hover, .register-rotation__btn:hover {
       opacity: 1;
       color: #fff;
