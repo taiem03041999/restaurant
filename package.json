@@ -1,7 +1,6 @@
 {
   "name": "vietnong",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sasstocss": "node-sass assets/sass/style.scss assets/css/style.css -w"
@@ -10,5 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "node-sass": "^9.0.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
