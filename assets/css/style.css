@@ -499,7 +499,7 @@ body {
     left: 70px;
     position: absolute;
     background: rgba(30, 30, 30, 0.1) url(https://drive.google.com/uc?id=1V3N2b79QjDWetC_ss9wI3c-xpWDymn9R) no-repeat center center;
-    background-size: 60%;
+    background-size: 50%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
@@ -1041,7 +1041,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center; }
   @media only screen and (max-width: 63.9375em) {
     .code-item {
@@ -1659,6 +1659,7 @@ body {
       margin-top: 50px; }
       .register-rotation .hide-on-bothTM {
         display: none !important; } }
+
   .register-rotation__circle {
     position: relative;
     display: -webkit-flex;
@@ -1666,6 +1667,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 46.1875em) {
+      .register-rotation__circle .hide-on-mobile {
+        display: none; }
+      .register-rotation__circle > svg {
+        height: fit-content; } }
   .register-rotation__btn:visited, .register-rotation__btn {
     position: absolute;
     top: 50%;
@@ -1769,7 +1775,8 @@ body {
     z-index: 2;
     display: grid;
     align-items: center;
-    grid-template-areas: "spinner" "trigger";
+    grid-template-areas: "spinner"
+ "trigger";
     font-family: "Girassol", sans-serif;
     font-size: calc(var(--size) / 21);
     line-height: 1;
